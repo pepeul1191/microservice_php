@@ -1,9 +1,9 @@
 {
-    "name": "softweb/microservice",
+    "name": "softweb/microservice_php",
     "type": "library",
     "description": "Microservice Application for Composer",
     "keywords": ["microservice","mvc"],
-    "homepage": "https://github.com/pepeul1191/microservice",
+    "homepage": "https://github.com/pepeul1191/microservice_php",
     "license": "MIT",
     "authors": [
         {
