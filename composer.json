@@ -1,7 +1,7 @@
 {
     "name": "softweb/microservice_php",
     "minimum-stability": "dev",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "type": "library",
     "description": "Microservice Application for Composer",
     "keywords": ["microservice","mvc"],
