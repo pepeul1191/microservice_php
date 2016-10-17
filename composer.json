@@ -1,6 +1,6 @@
 {
     "name": "softweb/microservice_php",
-    "minimum-stability": "dev",
+    "minimum-stability": "dev-master",
     "version": "1.0.0",
     "type": "library",
     "description": "Microservice Application for Composer",
@@ -16,6 +16,7 @@
         }
     ],
     "require": {
+        "php": ">=5.3.0 || ^7.0",
         "mikecao/flight": "^1.2",
         "monolog/monolog": "1.0.*",
         "net/http": "^1.1"
