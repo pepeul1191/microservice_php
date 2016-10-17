@@ -1,5 +1,6 @@
 {
     "name": "softweb/microservice_php",
+    "minimum-stability": "dev",
     "type": "library",
     "description": "Microservice Application for Composer",
     "keywords": ["microservice","mvc"],
@@ -18,7 +19,6 @@
         "monolog/monolog": "1.0.*",
         "mikecao/flight": "^1.2"
     },
-    "minimum-stability": "stable",
     "autoload": {
         "psr-0": {
             "Monolog": "src"
