@@ -14,7 +14,7 @@ abstract class Controller
     protected function load_model($modelo,$modulo = false)
     {
         $modelo = $modelo . 'Model';
-        $ruta_modelo = ROOT . 'models' . DS . $modelo . '.php';
+        $ruta_modelo = Configuration::get('path') . 'models' . DIRECTORY_SEPARATOR . $modelo . '.php';
 
         if(!$modulo){
             $modulo = $this->_request->get_modulo();
@@ -22,7 +22,7 @@ abstract class Controller
 
         if($modulo){
             if($modulo != 'default'){
-                $ruta_modelo = ROOT . 'modules' . DS . $modulo . DS . 'models' . DS . $modelo . '.php';
+                $ruta_modelo = Configuration::get('path') . 'modules' . DIRECTORY_SEPARATOR . $modulo . DIRECTORY_SEPARATOR . 'models' . DIRECTORY_SEPARATOR . $modelo . '.php';
             }
         }
         //var_dump($ruta_modelo);
@@ -39,7 +39,7 @@ abstract class Controller
     protected function load_controller($controlador,$modulo = false)
     {
         $controlador = $controlador . 'Controller';
-        $ruta_controlador = ROOT . 'controllers' . DS . $controlador . '.php';
+        $ruta_controlador = Configuration::get('path') . 'controllers' . DIRECTORY_SEPARATOR . $controlador . '.php';
 
         //var_dump($ruta_controlador);
 
@@ -49,7 +49,7 @@ abstract class Controller
         //var_dump($modulo);
         if($modulo){
             if($modulo != 'default'){
-                $ruta_controlador = ROOT . 'modules' . DS . $modulo . DS . 'controllers' . DS . $controlador . '.php';
+                $ruta_controlador = Configuration::get('path') . 'modules' . DIRECTORY_SEPARATOR . $modulo . DIRECTORY_SEPARATOR . 'controllers' . DIRECTORY_SEPARATOR . $controlador . '.php';
             }
         }
         //var_dump($ruta_controlador);
@@ -66,7 +66,7 @@ abstract class Controller
 
     protected function get_library($libreria)
     {
-        $ruta_libreria = ROOT . 'libs' . DS . $libreria . '.php';
+        $ruta_libreria = Configuration::get('path') . 'libs' . DIRECTORY_SEPARATOR . $libreria . '.php';
 
         if(is_readable($ruta_libreria)){
             require_once $ruta_libreria;

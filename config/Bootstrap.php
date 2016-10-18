@@ -6,7 +6,7 @@ class Bootstrap
     {
         $modulo = $peticion->get_modulo();
         $controller = $peticion->get_controlador() . 'Controller';
-        $ruta_controlador = ROOT . 'controllers' . DS . $controller . '.php';
+        $ruta_controlador = Configuration::get('path') . 'controllers' . DIRECTORY_SEPARATOR . $controller . '.php';
         $metodo = $peticion->get_metodo();
         $args = $peticion->get_args();
         //var_dump($peticion);var_dump($ruta_controlador);
